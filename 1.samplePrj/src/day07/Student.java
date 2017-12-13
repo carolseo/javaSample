@@ -1,0 +1,26 @@
+package day07;
+
+import java.util.Arrays;
+
+public class Student {   //class 생성
+	String name; 
+		int [] score = new int[3];    //배열은 반드시 생성후 사용
+		double sum;
+		double avg;
+		
+		public void process(){ // method 영역
+			sum=0;
+			for(int i =0; i< score.length; i++){
+				sum += score[i];      		
+			}
+			avg = sum/score.length;   
+		}		
+		public void display(){
+		System.out.println("========== 성적 처리 결과 표 ============");
+		System.out.println("이름: "+name);
+		System.out.println("성적: "+Arrays.toString(score));
+		System.out.println("총점: "+sum);
+		System.out.println("평균: "+avg);
+		System.out.println("=====================================");
+		}
+	}
